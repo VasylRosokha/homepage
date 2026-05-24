@@ -5,15 +5,16 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   line-height: 1.5;
+  background-color: #0d0d0d;
 
-  --primary-text-color: #181820;
-  --secondary-text-color: #5c5c62;
-  --durability-text-color: #6a737d9c;
-  --icon-color: #6a737d;
-  --border-color: #ff9a0045;
-  --text-decoration-color: #ff9a00;
+  --primary-text-color: #e0e0e0;
+  --secondary-text-color: #a0a0a0;
+  --durability-text-color: #666666;
+  --icon-color: #5f9e6e;
+  --border-color: #1a1a2e;
+  --text-decoration-color: #5f9e6e;
 }
 
 .container {
@@ -36,16 +37,17 @@ body {
 
 .resume {
   margin: 50px auto;
-  border: 1px solid #f5f5f5;
-  box-shadow: 1px 1px 7px 7px #f5f5f5;
-  padding: 30px 0;
+  border: 1px solid #1a1a2e;
+  box-shadow: 0 0 15px rgba(95, 158, 110, 0.08);
+  padding: 40px 0;
   max-width: 900px;
+  background-color: #111111;
 }
 
 .resume__block {
-  border-bottom: 3px solid var(--border-color);
+  border-bottom: 1px solid #1a1a2e;
   padding-bottom: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 @media screen and (max-width: 576px) {
@@ -73,15 +75,18 @@ body {
 }
 
 .contact-info__header {
-  color: var(--primary-text-color);
+  color: #5f9e6e;
   margin-bottom: 15px;
-  text-decoration-color: var(--text-decoration-color);
-  text-decoration-line: underline;
+  text-decoration-color: #5f9e6e;
+  text-decoration-line: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .contact-info__sub-header {
   color: var(--secondary-text-color);
   margin-bottom: 30px;
+  font-weight: 400;
 }
 
 .contact-info__block {
@@ -99,6 +104,11 @@ body {
   text-decoration: none;
   display: flex;
   justify-content: start;
+  transition: color 0.2s;
+}
+
+.contact-info__item:hover {
+  color: #7ab88a;
 }
 
 .contact-info__item:not(:last-child) {
@@ -126,8 +136,8 @@ body {
   width: 100px;
   height: 100px;
   object-fit: cover;
-  border: 3px solid;
-  border-color: var(--text-decoration-color);
+  border: 2px solid #5f9e6e;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
 }
 
 .intro {
@@ -157,9 +167,11 @@ body {
 }
 
 .skills__header {
-  color: var(--secondary-text-color);
+  color: #5f9e6e;
   text-align: center;
   margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .skills__text {
@@ -173,9 +185,11 @@ body {
 }
 
 .experiences__header {
-  color: var(--secondary-text-color);
+  color: #5f9e6e;
   text-align: left;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .experiences__company-header-durability {
@@ -187,7 +201,7 @@ body {
 
 .experiences__company-header-name {
   color: var(--primary-text-color);
-  text-decoration-color: var(--text-decoration-color);
+  text-decoration-color: #5f9e6e;
   text-decoration-line: underline;
   text-align: left;
   margin-bottom: 20px;
@@ -225,9 +239,11 @@ body {
 }
 
 .additional-info__education-header {
-  color: var(--secondary-text-color);
+  color: #5f9e6e;
   text-align: left;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .additional-info__education-university-durability {
@@ -252,11 +268,31 @@ body {
 }
 
 .additional-info__languages-header {
-  color: var(--secondary-text-color);
+  color: #5f9e6e;
   text-align: left;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .additional-info__languages-item {
   color: var(--secondary-text-color);
+}
+
+#music-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #1a1a2e;
+  color: #5f9e6e;
+  border: 1px solid #5f9e6e;
+  padding: 8px 16px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#music-toggle:hover {
+  background-color: #2a2a3e;
 }
